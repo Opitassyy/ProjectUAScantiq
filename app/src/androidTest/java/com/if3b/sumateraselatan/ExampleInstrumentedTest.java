@@ -1,4 +1,4 @@
-package com.tugasProjectPAB;
+package com.if3b.sumateraselatan;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.tugasProjectPAB", appContext.getPackageName());
+        assertEquals("com.if3b.sumateraselatan", appContext.getPackageName());
     }
 }

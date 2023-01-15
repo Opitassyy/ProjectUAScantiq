@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:elevation="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_fotoKab"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/tv_nama_kabupaten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kabupaten ---"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/iv_fotoKab"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/tv_nama_kota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ibu Kota ---"
+            android:layout_toRightOf="@+id/iv_fotoKab"
+            android:layout_below="@id/tv_nama_kabupaten"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

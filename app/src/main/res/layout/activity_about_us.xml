@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+    <TextView
+        android:id="@+id/nama_rafly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masagus Muhammad Rafli Djauhari"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:id="@+id/npm_rafly"
+        android:layout_below="@id/nama_rafly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="2125250034"
+        />
+
+    <TextView
+        android:layout_below="@+id/npm_rafly"
+        android:id="@+id/nama_dhea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anisah Dhiyaa Azzahra Putri"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        />
+    <TextView
+        android:id="@+id/npm_dhea"
+        android:layout_below="@id/nama_dhea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="2125250085"
+        />
+
+    <TextView
+        android:id="@+id/nama_silvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silvi Mutia"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:layout_below="@id/npm_dhea"
+        />
+    <TextView
+        android:id="@+id/npm_silvi"
+        android:layout_below="@id/nama_silvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+
+        android:text="2125250094"
+        />
+
+    <TextView
+        android:id="@+id/nama_opita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opita Purwasih"
+        android:layout_below="@id/npm_silvi"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        />
+    <TextView
+        android:id="@+id/npm_opita"
+        android:layout_below="@id/nama_opita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="2125250103"
+        />
+
+    <ImageView
+        android:id="@+id/iv_logo_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/logo_umdp"
+        />
+
+</RelativeLayout>

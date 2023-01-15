@@ -1,4 +1,4 @@
-package com.tugasProjectPAB;
+package com.if3b.sumateraselatan;
 
 import org.junit.Test;
 
