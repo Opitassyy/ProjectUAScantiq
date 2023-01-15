@@ -18,11 +18,11 @@ import java.util.ArrayList;
 
 public class AdapterCard extends RecyclerView.Adapter<AdapterCard.KabupatenViewHolder> {
 
-    private ArrayList<ModelData>dataKabupaten;
+    private ArrayList<ModelData>dataKabupatenKota;
     private Context ctx;
 
     public AdapterCard(ArrayList<ModelData> dataKabupaten, Context ctx) {
-        this.dataKabupaten = dataKabupaten;
+        this.dataKabupatenKota = dataKabupaten;
         this.ctx = ctx;
     }
 
@@ -35,10 +35,10 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.KabupatenViewH
 
     @Override
     public void onBindViewHolder(@NonNull KabupatenViewHolder holder, int position) {
-        ModelData kabupaten = dataKabupaten.get(position);
+        ModelData kabupaten = dataKabupatenKota.get(position);
 
         holder.tvNamaKab.setText(kabupaten.getNamakabupaten());
-        holder.tvNamaKota.setText(kabupaten.getNamakota());
+        holder.tvibuKota.setText(kabupaten.getIbukota());
 
 
         Glide
@@ -51,15 +51,23 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.KabupatenViewH
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String xNamaKabupaten,xNamaKota,xDeskripsi,xFoto;
+                String xNamaKabupaten,xIbuKota,xLuasWilayah,xDeskripsi,xFoto;
                 xNamaKabupaten = kabupaten.getNamakabupaten();
-                xNamaKota = kabupaten.getNamakota();
+                xIbuKota = kabupaten.getIbukota();
                 xFoto=kabupaten.getFoto();
+                xDeskripsi=kabupaten.getDeskripsi();
+                xLuasWilayah= kabupaten.getLuaswilayah();
+
 
                 Intent Kirim = new Intent(ctx, DetailActivity.class);
                 Kirim.putExtra("xNamaKabupaten",xNamaKabupaten);
-                Kirim.putExtra("xNamaKota",xNamaKota); //deskripsi
+                Kirim.putExtra("xIbuKota",xIbuKota);
                 Kirim.putExtra("xFoto",xFoto);
+                Kirim.putExtra("xDeskripsi",xDeskripsi);
+                Kirim.putExtra("xLuasWilayah",xLuasWilayah);
+
+
+
 
                 ctx.startActivity(Kirim);
 
@@ -71,13 +79,13 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.KabupatenViewH
 
     @Override
     public int getItemCount() {
-        return dataKabupaten.size();
+        return dataKabupatenKota.size();
     }
 
     public class KabupatenViewHolder extends RecyclerView.ViewHolder
     {
         ImageView ivFotoKab;
-        TextView tvNamaKab, tvNamaKota;
+        TextView tvNamaKab, tvibuKota,tvLuasWilayah;
         Button btnLokasi;
 
 
@@ -85,7 +93,8 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.KabupatenViewH
             super(itemView);
             ivFotoKab = itemView.findViewById(R.id.iv_fotoKab);
             tvNamaKab = itemView.findViewById(R.id.tv_nama_kabupaten);
-            tvNamaKota= itemView.findViewById(R.id.tv_nama_kota);
+            tvibuKota= itemView.findViewById(R.id.tv_ibu_kota);
+            tvLuasWilayah = itemView.findViewById(R.id.tv_luas_wilayah);
             btnLokasi=itemView.findViewById(R.id.btn_lokasi);
         }
     }

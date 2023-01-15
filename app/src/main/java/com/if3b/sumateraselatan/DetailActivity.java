@@ -15,10 +15,10 @@ import com.bumptech.glide.Glide;
 public class DetailActivity extends AppCompatActivity {
 
     private ImageView ivFotoKab;
-    private TextView tvNamaKab, tvNamaKota,tvDeskripsi;
+    private TextView tvNamaKab, tvNamaKota,tvDeskripsi,tvLuas;
     private Button btnLokasi;
 
-    private String yNamaKabupaten,yNamaKota,yDeskripsi,yFoto;
+    private String yNamaKabupaten,yNamaKota,yDeskripsi,yFoto,yLuasWilayah;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +26,17 @@ public class DetailActivity extends AppCompatActivity {
 
         ivFotoKab = findViewById(R.id.iv_fotoKab);
         tvNamaKab = findViewById(R.id.tv_nama_kabupaten);
-        tvNamaKota = findViewById(R.id.tv_nama_kota);
-        //tvDeskripsi = findViewById(R.id.tv_deskripsi);
+        tvNamaKota = findViewById(R.id.tv_ibu_kota);
+        tvDeskripsi = findViewById(R.id.tv_deskripsi);
+        tvLuas = findViewById(R.id.tv_luas_wilayah);
         btnLokasi = findViewById(R.id.btn_lokasi);
 
         Intent getData = getIntent();
         yNamaKabupaten = getData.getStringExtra("xNamaKabupaten");
-        yNamaKota = getData.getStringExtra("xNamaKota");
-        //yDeskripsi = getData.getStringExtra("xDeskripsi");
+        yNamaKota = getData.getStringExtra("xIbuKota");
+        yDeskripsi = getData.getStringExtra("xDeskripsi");
         yFoto = getData.getStringExtra("xFoto");
+        yLuasWilayah = getData.getStringExtra("xLuasWilayah");
 
         Glide
                 .with(DetailActivity.this)
@@ -43,7 +45,8 @@ public class DetailActivity extends AppCompatActivity {
 
         tvNamaKab.setText(yNamaKabupaten);
         tvNamaKota.setText(yNamaKota);
-        //tvDeskripsi.setText(yDeskripsi);
+        tvDeskripsi.setText(yDeskripsi);
+        tvLuas.setText(yLuasWilayah);
 
         btnLokasi.setOnClickListener(new View.OnClickListener() {
             @Override
